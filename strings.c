@@ -194,9 +194,7 @@ string_printf_append_internal(string *z, char *fmt, va_list args) {
     return NULL;
   }
   z = string_append(z, s);
-#ifndef __DUMA__
   free(s);
-#endif
   return z;
 }
 
@@ -211,9 +209,7 @@ string_printf_prepend_internal(string *z, char *fmt, va_list args) {
     return NULL;
   }
   z = string_prepend(z, s);
-#ifndef __DUMA__
   free(s);
-#endif
   return z;
 }
 

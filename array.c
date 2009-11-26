@@ -284,10 +284,10 @@ array_dump_element(array *a, int i, void (func)(void *d)) {
   }
   if(i >= a->n || i < 0) {
     fprintf(stderr, "\telement: %d %p %p alloc: %d n: %d\n", 
-	    i, NULL, NULL, a->alloc, a->n);
+            i, NULL, NULL, a->alloc, a->n);
   }
   fprintf(stderr, "\telement: %d %p %p alloc: %d n: %d\n\t", 
-	  i, a, array_element(a,i), a->alloc, a->n);
+          i, a, array_element(a,i), a->alloc, a->n);
   (func)(array_element(a,i));
 }
 

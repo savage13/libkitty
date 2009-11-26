@@ -77,9 +77,9 @@ fgetsp(char *s,
       cs--;
       *cs++ = '\n';
       if(n > 0 && (c = fgetc(stream)) != EOF) {
-	if(c != '\n') { /* Newline  - Windows */
-	  ungetc(c, stream);
-	}
+        if(c != '\n') { /* Newline  - Windows */
+          ungetc(c, stream);
+        }
       }
       break;
     }

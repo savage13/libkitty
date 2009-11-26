@@ -70,7 +70,7 @@ string_tokenize_with_quotes(string *s, char *sepin, char *quotein) {
 
   /* Make sure the number of quotes is even */
   if(nquote %2 != 0) {
-    // fprintf(stderr, "string_tokenize: mismatched quotes: %d\n", nquote);
+    fprintf(stderr, "string_tokenize: mismatched quotes: %d\n", nquote);
     free(sep);
     free(quote);
     return array_new();
@@ -92,10 +92,10 @@ string_tokenize_with_quotes(string *s, char *sepin, char *quotein) {
       pos_quote = strstr_escape(pos_quote + quotelen, quote);
 
       if(pos_quote == NULL) {
-	fprintf(stderr, "Error: Mismatched Quote\n");
-	array_free_data(tokens, string_free_v);
-	array_free(&tokens);
-	return array_new();
+        fprintf(stderr, "Error: Mismatched Quote\n");
+        array_free_data(tokens, string_free_v);
+        array_free(&tokens);
+        return array_new();
       }
 
       /* Advance the position past the quote */

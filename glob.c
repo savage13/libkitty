@@ -69,24 +69,24 @@ string_wildcard_expand(char *str) {
 #ifdef __UNIT_TESTING_DEBUG__
     fprintf(stderr, "path:    %s\n", string_string(p));
 #endif
-
+    
     if(string_length(p) > 0) {
       retval = glob(string_string(array_element(t,j)), flags, 
-		    string_wildcard_expand_error, &g);
+                    string_wildcard_expand_error, &g);
       switch(retval) {
       case GLOB_NOSPACE: 
-	fprintf(stderr, "Error allocating memory for file search\n");
-	break;
+        fprintf(stderr, "Error allocating memory for file search\n");
+        break;
       case GLOB_ABORTED: 
-	fprintf(stderr, "Error was encountered for \"%s\"\n",
-		string_string(p));
-	break;
+        fprintf(stderr, "Error was encountered for \"%s\"\n",
+                string_string(p));
+        break;
       case GLOB_NOMATCH: 
-	fprintf(stderr, "No matches were found for \"%s\"\n", 
-		string_string(p));
-	break;
+        fprintf(stderr, "No matches were found for \"%s\"\n", 
+                string_string(p));
+        break;
       }
-
+      
 #ifdef __UNIT_TESTING_DEBUG__
       fprintf(stderr, "retval:  %d\n", retval);
       fprintf(stderr, "path:    %d\n", g.gl_pathc);
@@ -97,7 +97,7 @@ string_wildcard_expand(char *str) {
   }
   for(i = 0; i < g.gl_pathc; i++) {
     fprintf(stderr, "string[%.3d/%.3d]: <%s>\n", 
-	    i, strlen(g.gl_pathv[i]), g.gl_pathv[i]);
+            i, strlen(g.gl_pathv[i]), g.gl_pathv[i]);
   }
   globfree(&g);
   

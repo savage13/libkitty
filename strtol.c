@@ -46,7 +46,7 @@ cdouble(char *s, long int *nerr) {
 
 #ifdef __UNIT_TESTING_DEBUG__
   fprintf(stderr, "v: %15.6e %4d %4d <%-12s> <%12s>\n", 
-	  v, errno, strlen(endptr), endptr, s);
+          v, errno, strlen(endptr), endptr, s);
 #endif /* __UNIT_TESTING_DEBUG__ */
   
   /* Error Checking */
