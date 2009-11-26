@@ -34,9 +34,9 @@ test_eof: fgetsp_test
 
 clean:
 	rm -f strings_test 
-	rm -f strings_tok 
 	rm -f strtol strtol.o 
 	rm -f fgetsp_test
 	rm -f core *.o *~
-
+	rm -f strtol_test
+	rm -f strings_tok_test
 
