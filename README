@@ -1,0 +1,132 @@
+libkitty 
+-------------
+
+ - Strings
+ - Array
+ - Sorting
+ - Misc
+
+
+Strings 
+--------
+
+- Creation and Destruction
+  - string_new
+  - string_free
+  - string_free_v
+  - string_form_fortran
+
+- Utilities
+  - string_check
+  - string_grow
+  - string_alloc
+  - string_pack
+  - strstr_escape
+  - strstr_reverse
+  - strstr_reverse_isnot
+
+- Copying
+  - string_copy
+ 
+- Formatting
+  - string_printf
+  - string_printf_interal
+  - string_printf_append
+  - string_printf_prepend_internal
+  - string_printf_prepend
+  - string_append_int
+  - string_prepend_int
+
+- Addition
+  - string_append
+  - string_prepend
+  - string_insert
+
+- Removal
+  - string_remove
+
+- Truncation
+  - string_trunc
+
+- Comparison
+  - string_equal_char
+  - string_equal
+  - string_compare
+  - string_compare_v
+  - string_compare_v_inv
+
+- Internals
+  - string_string
+  - string_length
+  - string_nalloc
+  
+- Sections
+  - string_substring
+  - string_substr_char
+ 
+- Find and Replace
+  - string_replace
+  - string_tilde_expand
+
+- Contents
+  - string_dump
+  - string_dump_v
+
+- Tokenize
+  - string_tokenize_with_quotes
+  - string_tokenize
+
+- File Contente
+  - string_read
+
+- Misc
+  - fgetsp
+  - cint
+  - cdouble
+
+Array
+--------
+
+- Creation
+  - array_new
+  - array_free
+  - array_free_data
+  - array_check
+  - array_malloc
+  - array_grow
+
+- Length
+  - array_length
+  
+- Elements
+  - array_shift
+  - array_pop
+  - array_element
+  - array_append
+  - array_prepend
+  - array_insert
+  - array_push
+  - array_append_p
+  - array_prepend_p
+  - array_insert_p
+  - array_push_p
+  - array_clear
+  - array_remove
+
+- Sorting
+  - array_sort_qsort
+  - array_sort
+
+- Contents
+  - array_dump
+  - array_dump_element
+  - array_dump_elements
+
+Sorting
+---------
+
+- merge_sort
+- insert_sort
+
+
+
